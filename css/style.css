@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins" sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c535.934C108.6%2c550.819%2c220.399%2c543.75%2c319.921%2c497.807C428.264%2c447.791%2c533.698%2c374.918%2c583.599%2c266.521C633.549%2c158.016%2c606.93%2c33.399%2c588.008%2c-84.543C569.363%2c-200.753%2c551.767%2c-322.375%2c474.828%2c-411.441C397.839%2c-500.564%2c283.597%2c-550.215%2c167.693%2c-571.108C58.839%2c-590.73%2c-46.144%2c-548.895%2c-154.098%2c-524.809C-270.448%2c-498.849%2c-406.475%2c-509.667%2c-489.797%2c-424.411C-573.822%2c-338.436%2c-583.949%2c-204.298%2c-584.825%2c-84.085C-585.625%2c25.742%2c-553.195%2c132.994%2c-494.534%2c225.846C-440.665%2c311.113%2c-353.571%2c363.628%2c-268.122%2c417.207C-183.599%2c470.206%2c-98.841%2c522.386%2c0%2c535.934' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1440 882.6410000000001C1509.223 886.677 1588.2350000000001 918.585 1643.731 877.011 1699.5529999999999 835.192 1695.013 750.804 1707.567 682.194 1717.417 628.364 1709.1019999999999 576.074 1708.808 521.351 1708.4569999999999 456.171 1746.401 380.683 1705.672 329.794 1665.211 279.239 1584.906 292.224 1520.452 286.007 1466.904 280.842 1415.797 288.113 1362.691 296.709 1301.659 306.58799999999997 1232.229 298.797 1186.228 340.105 1139.161 382.37 1136.645 452.884 1120.624 514.081 1102.51 583.271 1060.776 654.711 1086.379 721.4929999999999 1112.124 788.645 1185.544 824.288 1250.987 854.111 1310.167 881.0799999999999 1375.075 878.855 1440 882.6410000000001' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  padding: 10px;
+}
+.todo-app {
+  width: 50%;
+  min-width: 450px;
+  background: #fff;
+  padding: 40px 30px 70px;
+  margin: 100px auto 20px;
+  border-radius: 10px;
+}
+#title {
+  list-style-type: none;
+  display: flex;
+  padding-left: 5px;
+}
+#title li {
+  list-style: none;
+  font-family: arial;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-shadow: none;
+  animation: animate 2s infinite linear;
+}
+@keyframes animate {
+  0% {
+    color: #b8b6b6;
+    text-shadow: none;
+  }
+  18% {
+    color: #b8b6b6;
+    text-shadow: none;
+  }
+  20% {
+    color: #f54;
+    text-shadow: 0 0 7px #f54, 0 0 20px #f54;
+  }
+  30% {
+    color: #b8b6b6;
+    text-shadow: none;
+  }
+  35% {
+    color: #f54;
+    text-shadow: 0 0 7px #f54, 0 0 20px #f54;
+  }
+  70% {
+    color: #b8b6b6;
+    text-shadow: none;
+  }
+  85% {
+    color: #f54;
+    text-shadow: 0 0 7px #f54, 0 0 20px #f54;
+  }
+  90% {
+    color: #b8b6b6;
+    text-shadow: none;
+  }
+}
+
+.todo-app img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  z-index: 2;
+  border-style: outset;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px;
+  font-weight: 14;
+}
+button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  box-shadow: 1px 1px 1px;
+  outline: none;
+  padding: 16px 50px;
+  background: #eae7e7;
+  color: #000;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.5em;
+  overflow: hidden;
+  transition: color 1s, box-shadow 0s;
+  font-weight: 500;
+  z-index: 1;
+}
+button:hover {
+  transition-delay: 0s, 0.8s;
+  color: #fff;
+  box-shadow: 0 0 5px #ee0e28, 0 0 25px #f54, 0 0 30px #f54;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: #f54;
+  z-index: -1;
+  transition: 1s;
+  transform: translateX(-50%) scale(0) rotate(360deg);
+  color: #333;
+  box-shadow: 0 0 5px #f54, 0 0 25px #f54, 0 0 30px #f54;
+}
+button:hover::before {
+  width: 100%;
+  transform: translateX(-50%) scale(1);
+}
+#list-container li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+#list-container li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(../images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+#list-container .checked {
+  color: #555;
+  text-decoration: line-through;
+}
+#list-container .checked::before {
+  background-image: url(../images/checked.png);
+}
+#list-container li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+#list-container li span:hover {
+  background: #edeef0;
+}
+@media screen and (max-width: 575px) {
+  .todo-app {
+    width: 50%;
+    min-width: 350px;
+  }
+  button {
+    font-size: 0.5em;
+    padding: 10px 30px;
+  }
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  button {
+    font-size: 1em;
+    padding: 10px 30px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  button {
+    font-size: 1em;
+    padding: 10px 30px;
+  }
+}
